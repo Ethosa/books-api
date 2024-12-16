@@ -28,7 +28,7 @@ async def create_new_user(user: RegisterUser):
     return {'response': token}
 
 
-@user_app.post('/login')
+@user_app.post('/auth')
 async def create_new_user(user: LoginUser):
     existing_user = cur.execute(
         'SELECT * FROM user WHERE login = ?',
